@@ -1,0 +1,18 @@
+alter table clientes modify idclientes NOT NULL;
+alter table clientes modify nome NOT NULL varchar(80);
+alter table clientes modify datanascimento NOT NULL date;
+alter table clientes modify rg not null;
+alter table clientes modify cpf not null;
+
+create table locacoes
+(
+idlocacoes int,
+datalocacao date,
+);
+
+alter table enderecos modify logradouro PRIMARY KEY;
+alter table enderecos add bairro int not null;
+alter table enderecos add foreign key (bairro) references bairros(idbairros);
+
+alter table locacoes add column cliente int not null;
+alter table locacoes add foreign key (cliente) references clientes(idcliente);

@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+typedef struct TipoElemento
+{
+	int valor;
+}TElemento;
+
+typedef struct TipoFolha
+{
+	TElemento fila[10];
+	int tamanho_fila;
+}TFila;
+
+void inicializar(TFila *p)
+{
+	p->tamanho_fila = 0;
+}
+
+void enfileirar (TFila *p)
+{
+	if(p->tamanho_fila>10)
+	{
+		system("cls");
+		printf("Lista cheia");
+	}
+	else
+	{
+		system("cls");
+		for ()
+	}
+}
+
+void desenfileirar (TFila *p)
+{
+	
+}
+
+void apresentar (TFila *p)
+{
+}
+
+void menu()
+{
+
+	int opt=0;
+	do
+	{
+		printf("------------------------------------");
+		printf("\n|                                    |");
+		printf("\n|      ESCOLHA UMA OPCAO             |");
+		printf("\n|      1-ENFILEIRAR                  |");
+		printf("\n|      2-DESENFILEIRAR               |");
+		printf("\n|      3-INICIALIZAR                 |");
+		printf("\n|      4-APRESENTAR                  |");
+		printf("\n|                                    |");
+		printf("\n------------------------------------");
+		scanf("\n%d",&opt);
+	}while ((opt<1) || (opt>4));
+	
+	TFila fila_de_valores;
+	
+	switch(opt)
+	{
+		case 1: 
+			enfileirar(&fila_de_valores);
+			break;
+		case 2:
+			desenfileirar(&fila_de_valores);
+			break;
+			
+		case 3:
+			inicializar(&fila_de_valores);
+			break;
+			
+		case 4:
+			apresentar(&fila_de_valores);
+			break;
+	}
+		
+}
+int main()
+{
+	
+	
+	menu();
+	
+	getch();
+}
